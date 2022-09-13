@@ -1,5 +1,5 @@
 var TOKEN = 'XXX';
-var USER_ID = 'YYY';
+var CHAT_ID = 'YYY';
 
 const TelegramBot = require('telegram-bot-api')
 
@@ -8,6 +8,6 @@ exports.handler = async (event, context) => {
   bot.getMe()
     .then(console.log)
     .catch(console.err);
-  bot.sendMessage({chat_id: USER_ID, text: 'Test message'});
+  bot.sendMessage({chat_id: CHAT_ID, text: 'Test message'});
   return true;
 }
